@@ -5,7 +5,7 @@ import "./style.css";
 function SearchBar(props) {
     return (
         <Navbar bg="light" variant="light">
-            <Navbar.Brand >My Employee Search/Filter Tools</Navbar.Brand>
+            <Navbar.Brand >My Employee Search/Sort Tools (Click on Name, Role and Work Location to sort)</Navbar.Brand>
             <Form inline>
                 <FormControl
                     type="text"
