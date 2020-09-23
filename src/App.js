@@ -19,6 +19,8 @@ class App extends Component {
       alert("No Match");
       this.setState({search: ""})
       this.setState({ employees: employees });
+      console.log(employees)
+      console.log("No search")
       return;
     } else {
       this.setState({ employees: [arrEmployees] });
