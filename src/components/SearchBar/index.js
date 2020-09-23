@@ -1,25 +1,40 @@
 import React from "react";
 import { Navbar, Nav, NavDropdown, Form, Button, FormControl } from 'react-bootstrap'
+import "./style.css";
 
-function SearchBar() {
+function SearchBar(props) {
     return (
         <Navbar bg="light" variant="light">
-            <Navbar.Brand >Employee Search Tools</Navbar.Brand>
+            <Navbar.Brand >Employee Search/Filter Tools</Navbar.Brand>
             <Nav className="mr-auto">
-                <NavDropdown title="Location" id="basic-nav-dropdown">
-                    <NavDropdown.Item href="#action/3.1">Sydney</NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.2">Adelaide</NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.3">Melbourne</NavDropdown.Item>
+                <NavDropdown 
+                title="Location" 
+                name="sort" 
+                value={props.value} 
+                onChange={props.handleInputChange} 
+                onClick={props.handleSortSelect}
+                id="basic-nav-dropdown">
+                    <NavDropdown.Item href="#">Sydney</NavDropdown.Item>
+                    <NavDropdown.Item href="#">Adelaide</NavDropdown.Item>
+                    <NavDropdown.Item href="#">Melbourne</NavDropdown.Item>
                 </NavDropdown>
-                <NavDropdown title="Occupation" id="basic-nav-dropdown">
-                    <NavDropdown.Item href="#action/3.1">JS Dev</NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.2">CSS Dev</NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.3">Something Else</NavDropdown.Item>
+                <NavDropdown title="Occupation" name="sort"id="basic-nav-dropdown">
+                    <NavDropdown.Item href="#">JS Dev</NavDropdown.Item>
+                    <NavDropdown.Item href="#">CSS Dev</NavDropdown.Item>
+                    <NavDropdown.Item href="#">Something Else</NavDropdown.Item>
                 </NavDropdown>
             </Nav>
             <Form inline>
-                <FormControl type="text" placeholder="Name" className="mr-sm-2" />
-                <Button variant="outline-primary">Search</Button>
+                <FormControl
+                    type="text"
+                    placeholder="Name"
+                    className="mr-sm-2"
+                    onChange={props.handleInputChange}
+                    value={props.value}
+                    name="search" />
+                <Button 
+                variant="outline-primary" 
+                onClick={props.handleFormSubmit}>Search</Button>
             </Form>
         </Navbar>
 

@@ -7,8 +7,50 @@ import './App.css';
 
 class App extends Component {
   state = {
-    employees
+    employees: employees,
+    search: '',
+    sort: ''
   }
+
+  searchName = query => {
+    let arrEmployees = this.state.employees
+    arrEmployees = arrEmployees.find(res => res.name === query)
+    console.log(arrEmployees)
+    if (!arrEmployees){
+      alert("No Match");
+      return
+   } else {
+     this.setState({employees: [arrEmployees]})
+    }
+   
+  };
+
+  sort = query => {
+    let arrEmployees = this.state.employees
+    arrEmployees = arrEmployees.filter(res => res.location === query)
+    console.log(arrEmployees)
+    this.setState({employees: [arrEmployees]})
+    
+    
+  }
+
+  handleInputChange = event => {
+    const value = event.target.value;
+    const name = event.target.name;
+    this.setState({
+      [name]: value
+    });
+  };
+
+  handleSortSelect = event => {
+    event.preventDefault();
+    this.sort(this.state.sort);
+  };
+
+  handleFormSubmit = event => {
+    event.preventDefault();
+    this.searchName(this.state.search);
+  };
 
   // sortEmployees = (role) => {
   //   const sortEmployee;
@@ -17,8 +59,10 @@ class App extends Component {
   render() {
     return (
       <Wrapper>
-        <SearchBar />
-        <List employees={employees} />
+        <SearchBar value={this.state.search}
+                handleInputChange={this.handleInputChange}
+                handleFormSubmit={this.handleFormSubmit}/>
+        <List employees={this.state.employees} />
       </Wrapper>
     );
   }
