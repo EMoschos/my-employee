@@ -3,7 +3,7 @@ import { Table, Image } from 'react-bootstrap'
 import "./style.css";
 
 function List(props) {
- 
+
   const employee = props.employees
 
   return (
@@ -11,15 +11,21 @@ function List(props) {
       <thead>
         <tr>
           <th>Profile Pic</th>
-          <th>Name</th>
-          <th>Role</th>
-          <th>Work Location</th>
+          <th
+            onClick={props.handleSortSelect}
+          >Name</th>
+          <th
+            onClick={props.handleSortSelect}
+          >Role</th>
+          <th
+            onClick={props.handleSortSelect}
+          >Work Location</th>
         </tr>
       </thead>
       <tbody>
         {employee.map(item => (
           <tr key={item.id}>
-            <td><Image alt={item.name} src={item.image} roundedCircle fluid/></td>
+            <td><Image alt={item.name} src={item.image} roundedCircle fluid /></td>
             <td>{item.name}</td>
             <td>{item.occupation}</td>
             <td>{item.location}</td>
