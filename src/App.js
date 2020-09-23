@@ -15,7 +15,12 @@ class App extends Component {
     let arrEmployees = this.state.employees;
     arrEmployees = arrEmployees.find(res => res.name === query);
     console.log(arrEmployees);
-    if (!arrEmployees) {
+    if (query === ""){
+      console.log("No Query")
+      this.setState({ employees: employees });
+      this.setState({search: ""})
+      return;
+    } else if (!arrEmployees) {
       this.setState({search: ""})
       this.setState({ employees: employees });
       console.log(employees)
