@@ -12,34 +12,37 @@ class App extends Component {
   }
 
   searchName = query => {
-    let arrEmployees = this.state.employees
-    arrEmployees = arrEmployees.find(res => res.name === query)
-    console.log(arrEmployees)
+    let arrEmployees = this.state.employees;
+    arrEmployees = arrEmployees.find(res => res.name === query);
+    console.log(arrEmployees);
     if (!arrEmployees) {
       alert("No Match");
-      return
+      return;
+    } else if (query === ""){
+      this.setState({ employees: employees });
+      return;
     } else {
-      this.setState({ employees: [arrEmployees] })
+      this.setState({ employees: [arrEmployees] });
     }
   };
 
   sort = query => {
-    let arrEmployees = this.state.employees
-    console.log("Sorting")
-    console.log(query)
+    let arrEmployees = this.state.employees;
+    console.log("Sorting");
+    console.log(query);
     if (query === "Work Location") {
       arrEmployees = arrEmployees.sort(function (a, b) {
-        console.log("in sort query1")
-        let nameA = a.location.toLowerCase(), nameB = b.location.toLowerCase()
+        console.log("in sort query1");
+        let nameA = a.location.toLowerCase(), nameB = b.location.toLowerCase();
         if (nameA < nameB) //sort string ascending
           return -1
         if (nameA > nameB)
           return 1
         return 0
-      })
-      console.log("in sort query2")
-      console.log(arrEmployees)
-      this.setState({ employees: arrEmployees})
+      });
+      console.log("in sort query2");
+      console.log(arrEmployees);
+      this.setState({ employees: arrEmployees});
     } 
     
     if (query === "Role") {
