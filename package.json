@@ -1,5 +1,6 @@
 {
   "name": "my-employee",
+  "homepage": "https://emoschos.github.io/my-employee",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
