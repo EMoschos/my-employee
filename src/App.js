@@ -8,20 +8,23 @@ import './App.css';
 class App extends Component {
   state = {
     employees: employees,
-    search: ''
+    search: '',
+    sortName: true,
+    sortLoc: true,
+    sortOcc: true
   }
 
   searchName = query => {
     let arrEmployees = this.state.employees;
     arrEmployees = arrEmployees.find(res => res.name === query);
     console.log(arrEmployees);
-    if (query === ""){
+    if (query === "") {
       console.log("No Query")
       this.setState({ employees: employees });
-      this.setState({search: ""})
+      this.setState({ search: "" })
       return;
     } else if (!arrEmployees) {
-      this.setState({search: ""})
+      this.setState({ search: "" })
       this.setState({ employees: employees });
       console.log(employees)
       console.log("No search")
@@ -46,11 +49,23 @@ class App extends Component {
           return 1
         return 0
       });
+      if (this.state.sortLoc === true) {
+        this.setState({ sortLoc: false })
+        this.setState({ employees: arrEmployees });
+        console.log("in true sort loc");
+        return;
+      }
+      if (this.state.sortLoc === false) {
+        arrEmployees = arrEmployees.reverse();
+        this.setState({ sortLoc: true })
+        this.setState({ employees: arrEmployees });
+        console.log("in false sort loc");
+        return;
+      }
       console.log("in sort query2");
       console.log(arrEmployees);
-      this.setState({ employees: arrEmployees});
-    } 
-    
+    }
+
     if (query === "Role") {
       arrEmployees = arrEmployees.sort(function (a, b) {
         console.log("in sort query1")
@@ -64,7 +79,7 @@ class App extends Component {
 
       console.log("in sort query3")
       console.log(arrEmployees)
-      this.setState({ employees: arrEmployees})
+      this.setState({ employees: arrEmployees })
     }
 
     if (query === "Name") {
@@ -80,7 +95,7 @@ class App extends Component {
 
       console.log("in sort query3")
       console.log(arrEmployees)
-      this.setState({ employees: arrEmployees})
+      this.setState({ employees: arrEmployees })
     }
   }
 
