@@ -9,6 +9,7 @@ function SearchBar(props) {
             <Form inline>
                 <FormControl
                     type="text"
+                    onKeyPress={(e) => { e.key === 'Enter' && e.preventDefault(); }}
                     placeholder="Name"
                     className="mr-sm-2"
                     onChange={props.handleInputChange}
