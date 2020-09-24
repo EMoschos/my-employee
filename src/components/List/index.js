@@ -13,13 +13,16 @@ function List(props) {
           <th>Profile Pic</th>
           <th
             onClick={props.handleSortSelect}
-          >Name</th>
+            data-tag="Name"
+          >Name 🔀</th>
           <th
             onClick={props.handleSortSelect}
-          >Role</th>
+            data-tag="Role"
+          >Role 🔀</th>
           <th
             onClick={props.handleSortSelect}
-          >Work Location</th>
+            data-tag="Work Location"
+          >Work Location 🔀</th>
         </tr>
       </thead>
       <tbody>

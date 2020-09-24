@@ -134,7 +134,7 @@ class App extends Component {
     event.preventDefault();
     console.log("Clicked")
 
-    const value = event.target.textContent;
+    const value = event.target.getAttribute('data-tag');
     console.log(value)
     this.sort(value);
   };
@@ -157,7 +157,7 @@ class App extends Component {
               NOTES: The search name does "NOT" need to be an exact match to show in the list and the search may return mulitiple answers.  You can also return the full list after a search by having a blank search input and clicking search
            </p>
            <p>
-              Click the heading to sort and then click a second time to reverse order the sort.
+           🔀 indicates ability to sort.  Click the heading to sort and then click a second time to reverse order the sort.
            </p>
           </Container>
         </Jumbotron>
