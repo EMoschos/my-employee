@@ -5,7 +5,7 @@ import "./style.css";
 function SearchBar(props) {
     return (
         <Navbar bg="light" variant="light">
-            <Navbar.Brand >My Employee</Navbar.Brand>
+            <Navbar.Brand >My-Employee</Navbar.Brand>
             <Form inline>
                 <FormControl
                     type="text"
