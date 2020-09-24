@@ -24,7 +24,7 @@ class App extends Component {
       this.setState({ employees: employees });
       this.setState({ search: "" })
       return;
-    } else if (!arrEmployees) {
+    } else if (arrEmployees.length < 1) {
       this.setState({ search: "" })
       this.setState({ employees: employees });
       console.log(employees)
