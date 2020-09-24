@@ -41,7 +41,7 @@ class App extends Component {
     console.log(query);
     if (query === "Work Location") {
       arrEmployees = arrEmployees.sort(function (a, b) {
-        console.log("in sort query1");
+        console.log("in sort function-Loc");
         let nameA = a.location.toLowerCase(), nameB = b.location.toLowerCase();
         if (nameA < nameB) //sort string ascending
           return -1
@@ -52,23 +52,23 @@ class App extends Component {
       if (this.state.sortLoc === true) {
         this.setState({ sortLoc: false })
         this.setState({ employees: arrEmployees });
-        console.log("in true sort loc");
+        console.log("in true sort LOC");
         return;
       }
       if (this.state.sortLoc === false) {
         arrEmployees = arrEmployees.reverse();
         this.setState({ sortLoc: true })
         this.setState({ employees: arrEmployees });
-        console.log("in false sort loc");
+        console.log("in false sort LOC");
         return;
       }
-      console.log("in sort query2");
+      console.log("in sort query3-LOC");
       console.log(arrEmployees);
     }
 
     if (query === "Role") {
       arrEmployees = arrEmployees.sort(function (a, b) {
-        console.log("in sort query1")
+        console.log("in sort function-role")
         let nameA = a.occupation.toLowerCase(), nameB = b.occupation.toLowerCase()
         if (nameA < nameB) //sort string ascending
           return -1
@@ -76,15 +76,26 @@ class App extends Component {
           return 1
         return 0
       })
-
-      console.log("in sort query3")
+      if (this.state.sortLoc === true) {
+        this.setState({ sortOcc: false })
+        this.setState({ employees: arrEmployees });
+        console.log("in true sort OCC");
+        return;
+      }
+      if (this.state.sortLoc === false) {
+        arrEmployees = arrEmployees.reverse();
+        this.setState({ sortOcc: true })
+        this.setState({ employees: arrEmployees });
+        console.log("in false sort OCC");
+        return;
+      }
+      console.log("in sort query2-OCC")
       console.log(arrEmployees)
-      this.setState({ employees: arrEmployees })
     }
 
     if (query === "Name") {
       arrEmployees = arrEmployees.sort(function (a, b) {
-        console.log("in sort query1")
+        console.log("in sort function-name")
         let nameA = a.name.toLowerCase(), nameB = b.name.toLowerCase()
         if (nameA < nameB) //sort string ascending
           return -1
@@ -92,10 +103,21 @@ class App extends Component {
           return 1
         return 0
       })
-
-      console.log("in sort query3")
+      if (this.state.sortLoc === true) {
+        this.setState({ sortName: false })
+        this.setState({ employees: arrEmployees });
+        console.log("in true sort NAME");
+        return;
+      }
+      if (this.state.sortLoc === false) {
+        arrEmployees = arrEmployees.reverse();
+        this.setState({ sortName: true })
+        this.setState({ employees: arrEmployees });
+        console.log("in false sort NAME");
+        return;
+      }
+      console.log("in sort query1-NAME")
       console.log(arrEmployees)
-      this.setState({ employees: arrEmployees })
     }
   }
 
