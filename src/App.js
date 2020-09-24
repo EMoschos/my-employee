@@ -17,7 +17,7 @@ class App extends Component {
 
   searchName = query => {
     let arrEmployees = this.state.employees;
-    arrEmployees = arrEmployees.filter(({name}) => name.toLowerCase().indexOf(query.toLowerCase()) !== -1);
+    arrEmployees = arrEmployees.find(res => res.name === query);
     console.log(arrEmployees);
     if (query === "") {
       console.log("No Query")
