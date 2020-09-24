@@ -1,68 +1,56 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# My-Employee ![License](https://img.shields.io/static/v1?label=Licesne&message=GPL-2.0&color=green)
+  
 
-## Available Scripts
+  ## Description ✏️
+  
+  View employee directory and access their information with ability to sort and search.
+  
+  ## Table of Contents 📚
+  
+  * [Installation](#installation)
+  * [Usage](#usage)
+  * [License](#license)
+  * [Contributing](#Contributing)
+  * [Testing](#Testing)
+  * [Questions](#Questions)
+  
+  ## Installation 
 
-In the project directory, you can run:
+  ```
+  📥 No installation required.  
+  Access @ https://emoschos.github.io/my-employee/
+  Repo @ https://github.com/EMoschos/my-employee
+  ```
 
-### `npm start`
+  ## Usage 
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+  ```
+  ▶️ Open the app through the provided link.  Use My-Employee to sort by clicking the heading or search by name in the "Search" bar.  The search name does "NOT" need to be an exact match to show in the list and the search may return multiple answers. You can also return the full list after a search by having a blank search input and clicking search. 🔀 indicates ability to sort. Click the heading to sort and then click a second time to reverse order the sort.
+  ```
+[Click Here](https://emoschos.github.io/my-employee/) to access My-Employee
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+![Start App](./images/start.PNG) ![Search App](./images/search.PNG) ![Sort App](./images/sort.PNG)
+  ## License 
+  
+  📜 License Code: GPL-2.0
 
-### `npm test`
+  For detailed information on license [Click Here](https://opensource.org/licenses/GPL-2.0)
+  
+  ## Contributing
+  
+  👌 No contribution at this time
+  
+  ## Testing 
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+  ```
+  ✔️ npm test - this can only be used if the application repo is downloaded and run through a computer with node.js.  Launches the test runner in the interactive watch mode.
+  ```
 
-### `npm run build`
+  ## Questions 
+  
+  Direct questions to me via email 📧 at [tmoschos@bigpond.com](tmoschos@bigpond.com).  Please use "My-Employee questions" in the subject and I will hopefully return a response within 48hrs.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+  More information can be found at my [GitHub Profile](https://github.com/EMoschos).
+  
+---
+This README was created by the "Great-Read" 📝 Node.js app.  Developed by Eleftherios Moschos
