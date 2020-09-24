@@ -4,6 +4,7 @@ import Wrapper from './components/Container'
 import SearchBar from './components/SearchBar'
 import employees from './utils/employees.json'
 import './App.css';
+import { Jumbotron, Container } from 'react-bootstrap'
 
 class App extends Component {
   state = {
@@ -146,6 +147,17 @@ class App extends Component {
   render() {
     return (
       <Wrapper>
+        <Jumbotron fluid>
+          <Container>
+            <h1>My-Employee</h1>
+            <p>
+              Use My-Employee to sort by clicking the heading or search by name in the "Search" bar.
+            </p>
+            <p>
+              NOTE: The search name needs to be an exact match to show in the list and by clicking the heading a second time you can reverse order the sort.
+           </p>
+          </Container>
+        </Jumbotron>
         <SearchBar value={this.state.search}
           handleInputChange={this.handleInputChange}
           handleFormSubmit={this.handleFormSubmit} />
