@@ -17,7 +17,7 @@ class App extends Component {
 
   searchName = query => {
     let arrEmployees = this.state.employees;
-    arrEmployees = arrEmployees.find(res => res.name.toLowerCase().includes(query.toLowerCase()));
+    arrEmployees = arrEmployees.filter(res => res.name.toLowerCase().includes(query.toLowerCase()));
     console.log(arrEmployees);
     if (query === "") {
       console.log("No Query")
@@ -32,7 +32,7 @@ class App extends Component {
       alert("No Match");
       return;
     } else {
-      this.setState({ employees: [arrEmployees] });
+      this.setState({ employees: arrEmployees });
     }
   };
 
