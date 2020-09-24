@@ -76,13 +76,13 @@ class App extends Component {
           return 1
         return 0
       })
-      if (this.state.sortLoc === true) {
+      if (this.state.sortOcc === true) {
         this.setState({ sortOcc: false })
         this.setState({ employees: arrEmployees });
         console.log("in true sort OCC");
         return;
       }
-      if (this.state.sortLoc === false) {
+      if (this.state.sortOcc === false) {
         arrEmployees = arrEmployees.reverse();
         this.setState({ sortOcc: true })
         this.setState({ employees: arrEmployees });
@@ -103,13 +103,13 @@ class App extends Component {
           return 1
         return 0
       })
-      if (this.state.sortLoc === true) {
+      if (this.state.sortName === true) {
         this.setState({ sortName: false })
         this.setState({ employees: arrEmployees });
         console.log("in true sort NAME");
         return;
       }
-      if (this.state.sortLoc === false) {
+      if (this.state.sortName === false) {
         arrEmployees = arrEmployees.reverse();
         this.setState({ sortName: true })
         this.setState({ employees: arrEmployees });
