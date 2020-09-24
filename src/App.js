@@ -154,7 +154,10 @@ class App extends Component {
               Use My-Employee to sort by clicking the heading or search by name in the "Search" bar.
             </p>
             <p>
-              NOTE: The search name needs to be an exact match to show in the list and by clicking the heading a second time you can reverse order the sort.  You can also return the full list after a search by having a blank search input and clicking search
+              NOTES: The search name does "NOT" need to be an exact match to show in the list and the search may return mulitiple answers.  You can also return the full list after a search by having a blank search input and clicking search
+           </p>
+           <p>
+              Click the heading to sort and then click a second time to reverse order the sort.
            </p>
           </Container>
         </Jumbotron>
